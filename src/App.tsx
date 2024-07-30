@@ -1,14 +1,22 @@
-import Counter from "./features/Counter"
-import Data from "./features/Data"
-import HomeWork from "./features/HomeWork"
+import { Routes, Route } from "react-router-dom"
+// import HomeWork from "./features/HomeWork"
+import Header from "./shared/Header"
+import HomePage from "./pages/Home"
+import CartPage from "./pages/Cart/view/CartPage"
+import { ToastContainer } from "react-toastify"
+
+
 
 function App() {
   
   return (
     <>
-     <Counter /> 
-     <Data />
-     <HomeWork />
+    <ToastContainer />
+    <Header />
+    <Routes>
+    <Route path="/" element={<HomePage />}/> 
+    <Route path="/cart" element={<CartPage />}/>   
+    </Routes>
     </>
   )
 }
